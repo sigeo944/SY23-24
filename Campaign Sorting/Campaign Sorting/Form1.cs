@@ -12,8 +12,10 @@ namespace Campaign_Sorting
 {
     public partial class Form1 : Form
     {
-        int campaign = 0;
+        public int campaigns = 0;
         int players = 0;
+
+        Form2 CampaignNames = new Form2();
         public Form1()
         {
             InitializeComponent();
@@ -21,20 +23,23 @@ namespace Campaign_Sorting
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void next1B_Click(object sender, EventArgs e)
         {
-            int.TryParse(campaignTB.Text, out campaign);
+            int.TryParse(campaignTB.Text, out campaigns);
             int.TryParse(playerTB.Text, out players);
 
-            if (players != 0 && campaign != 0)
+            if (players != 0 && campaigns != 0)
             {
+                Visible = false;
+                Enabled = false;
+                CampaignNames.ShowDialog();
                 this.Close();
             }
             else
-                MessageBox.Show("Error, please try agian. Enter only numerical values.");
+                MessageBox.Show("Please try agian. Enter only numerical values.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
     }
 }
