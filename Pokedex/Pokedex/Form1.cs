@@ -40,12 +40,13 @@ namespace Pokedex
             {
                 StreamReader inFile = new StreamReader("Pokemon.txt");
                 string S = inFile.ReadToEnd();
-                ReadPokemon(S);
+                Pokemon p = ReadPokemon(S);
+                ShowPokemon(p);
                 inFile.Close();
             }
         }
 
-        private void ReadPokemon(string s)
+        private Pokemon ReadPokemon(string s)
         {
             Pokemon p = new Pokemon();
             string[] fields = s.Split('|');
@@ -64,6 +65,8 @@ namespace Pokedex
             else
                 p.Shiny = false;
             p.Gen = int.Parse(fields[8]);
+
+            return p;
         }
 
         private void saveB_Click(object sender, EventArgs e)
@@ -89,6 +92,12 @@ namespace Pokedex
             StreamWriter outFile = new StreamWriter("Pokemon.txt");
             outFile.Write(debugTB.Text);
             outFile.Close();
+        }
+
+        private void ShowPokemon(Pokemon p)
+        {
+            nameTB.Text = p.Name;
+
         }
     }
 }
