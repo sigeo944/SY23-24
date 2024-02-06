@@ -75,213 +75,273 @@
             // 
             // textBox1
             // 
+            this.textBox1.Enabled = false;
             this.textBox1.Location = new System.Drawing.Point(35, 87);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(370, 38);
             this.textBox1.TabIndex = 1;
+            this.textBox1.Visible = false;
             // 
             // textBox2
             // 
+            this.textBox2.Enabled = false;
             this.textBox2.Location = new System.Drawing.Point(35, 141);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(370, 38);
             this.textBox2.TabIndex = 2;
+            this.textBox2.Visible = false;
             // 
             // textBox3
             // 
+            this.textBox3.Enabled = false;
             this.textBox3.Location = new System.Drawing.Point(35, 195);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(370, 38);
             this.textBox3.TabIndex = 3;
+            this.textBox3.Visible = false;
             // 
             // textBox4
             // 
+            this.textBox4.Enabled = false;
             this.textBox4.Location = new System.Drawing.Point(35, 249);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(370, 38);
             this.textBox4.TabIndex = 4;
+            this.textBox4.Visible = false;
             // 
             // textBox5
             // 
+            this.textBox5.Enabled = false;
             this.textBox5.Location = new System.Drawing.Point(35, 303);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(370, 38);
             this.textBox5.TabIndex = 5;
+            this.textBox5.Visible = false;
             // 
             // textBox6
             // 
+            this.textBox6.Enabled = false;
             this.textBox6.Location = new System.Drawing.Point(35, 357);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(370, 38);
             this.textBox6.TabIndex = 6;
+            this.textBox6.Visible = false;
             // 
             // textBox7
             // 
+            this.textBox7.Enabled = false;
             this.textBox7.Location = new System.Drawing.Point(35, 411);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(370, 38);
             this.textBox7.TabIndex = 7;
+            this.textBox7.Visible = false;
             // 
             // textBox8
             // 
+            this.textBox8.Enabled = false;
             this.textBox8.Location = new System.Drawing.Point(35, 465);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(370, 38);
             this.textBox8.TabIndex = 8;
+            this.textBox8.Visible = false;
             // 
             // textBox9
             // 
+            this.textBox9.Enabled = false;
             this.textBox9.Location = new System.Drawing.Point(35, 519);
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(370, 38);
             this.textBox9.TabIndex = 9;
+            this.textBox9.Visible = false;
             // 
             // textBox10
             // 
+            this.textBox10.Enabled = false;
             this.textBox10.Location = new System.Drawing.Point(35, 573);
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(370, 38);
             this.textBox10.TabIndex = 10;
+            this.textBox10.Visible = false;
             // 
             // textBox11
             // 
+            this.textBox11.Enabled = false;
             this.textBox11.Location = new System.Drawing.Point(425, 87);
             this.textBox11.Name = "textBox11";
             this.textBox11.Size = new System.Drawing.Size(370, 38);
             this.textBox11.TabIndex = 11;
+            this.textBox11.Visible = false;
             // 
             // textBox12
             // 
+            this.textBox12.Enabled = false;
             this.textBox12.Location = new System.Drawing.Point(425, 141);
             this.textBox12.Name = "textBox12";
             this.textBox12.Size = new System.Drawing.Size(370, 38);
             this.textBox12.TabIndex = 12;
+            this.textBox12.Visible = false;
             // 
             // textBox13
             // 
+            this.textBox13.Enabled = false;
             this.textBox13.Location = new System.Drawing.Point(425, 195);
             this.textBox13.Name = "textBox13";
             this.textBox13.Size = new System.Drawing.Size(370, 38);
             this.textBox13.TabIndex = 13;
+            this.textBox13.Visible = false;
             // 
             // textBox14
             // 
+            this.textBox14.Enabled = false;
             this.textBox14.Location = new System.Drawing.Point(425, 249);
             this.textBox14.Name = "textBox14";
             this.textBox14.Size = new System.Drawing.Size(370, 38);
             this.textBox14.TabIndex = 14;
+            this.textBox14.Visible = false;
             // 
             // textBox15
             // 
+            this.textBox15.Enabled = false;
             this.textBox15.Location = new System.Drawing.Point(425, 303);
             this.textBox15.Name = "textBox15";
             this.textBox15.Size = new System.Drawing.Size(370, 38);
             this.textBox15.TabIndex = 15;
+            this.textBox15.Visible = false;
             // 
             // textBox16
             // 
+            this.textBox16.Enabled = false;
             this.textBox16.Location = new System.Drawing.Point(425, 357);
             this.textBox16.Name = "textBox16";
             this.textBox16.Size = new System.Drawing.Size(370, 38);
             this.textBox16.TabIndex = 16;
+            this.textBox16.Visible = false;
             // 
             // textBox17
             // 
+            this.textBox17.Enabled = false;
             this.textBox17.Location = new System.Drawing.Point(425, 411);
             this.textBox17.Name = "textBox17";
             this.textBox17.Size = new System.Drawing.Size(370, 38);
             this.textBox17.TabIndex = 17;
+            this.textBox17.Visible = false;
             // 
             // textBox18
             // 
+            this.textBox18.Enabled = false;
             this.textBox18.Location = new System.Drawing.Point(425, 465);
             this.textBox18.Name = "textBox18";
             this.textBox18.Size = new System.Drawing.Size(370, 38);
             this.textBox18.TabIndex = 18;
+            this.textBox18.Visible = false;
             // 
             // textBox19
             // 
+            this.textBox19.Enabled = false;
             this.textBox19.Location = new System.Drawing.Point(425, 519);
             this.textBox19.Name = "textBox19";
             this.textBox19.Size = new System.Drawing.Size(370, 38);
             this.textBox19.TabIndex = 19;
+            this.textBox19.Visible = false;
             // 
             // textBox20
             // 
+            this.textBox20.Enabled = false;
             this.textBox20.Location = new System.Drawing.Point(425, 573);
             this.textBox20.Name = "textBox20";
             this.textBox20.Size = new System.Drawing.Size(370, 38);
             this.textBox20.TabIndex = 20;
+            this.textBox20.Visible = false;
             // 
             // textBox21
             // 
+            this.textBox21.Enabled = false;
             this.textBox21.Location = new System.Drawing.Point(811, 87);
             this.textBox21.Name = "textBox21";
             this.textBox21.Size = new System.Drawing.Size(370, 38);
             this.textBox21.TabIndex = 21;
+            this.textBox21.Visible = false;
             // 
             // textBox22
             // 
+            this.textBox22.Enabled = false;
             this.textBox22.Location = new System.Drawing.Point(811, 141);
             this.textBox22.Name = "textBox22";
             this.textBox22.Size = new System.Drawing.Size(370, 38);
             this.textBox22.TabIndex = 22;
+            this.textBox22.Visible = false;
             // 
             // textBox23
             // 
+            this.textBox23.Enabled = false;
             this.textBox23.Location = new System.Drawing.Point(811, 195);
             this.textBox23.Name = "textBox23";
             this.textBox23.Size = new System.Drawing.Size(370, 38);
             this.textBox23.TabIndex = 23;
+            this.textBox23.Visible = false;
             // 
             // textBox24
             // 
+            this.textBox24.Enabled = false;
             this.textBox24.Location = new System.Drawing.Point(811, 249);
             this.textBox24.Name = "textBox24";
             this.textBox24.Size = new System.Drawing.Size(370, 38);
             this.textBox24.TabIndex = 24;
+            this.textBox24.Visible = false;
             // 
             // textBox25
             // 
+            this.textBox25.Enabled = false;
             this.textBox25.Location = new System.Drawing.Point(811, 303);
             this.textBox25.Name = "textBox25";
             this.textBox25.Size = new System.Drawing.Size(370, 38);
             this.textBox25.TabIndex = 25;
+            this.textBox25.Visible = false;
             // 
             // textBox26
             // 
+            this.textBox26.Enabled = false;
             this.textBox26.Location = new System.Drawing.Point(811, 357);
             this.textBox26.Name = "textBox26";
             this.textBox26.Size = new System.Drawing.Size(370, 38);
             this.textBox26.TabIndex = 26;
+            this.textBox26.Visible = false;
             // 
             // textBox27
             // 
+            this.textBox27.Enabled = false;
             this.textBox27.Location = new System.Drawing.Point(811, 411);
             this.textBox27.Name = "textBox27";
             this.textBox27.Size = new System.Drawing.Size(370, 38);
             this.textBox27.TabIndex = 27;
+            this.textBox27.Visible = false;
             // 
             // textBox28
             // 
+            this.textBox28.Enabled = false;
             this.textBox28.Location = new System.Drawing.Point(811, 465);
             this.textBox28.Name = "textBox28";
             this.textBox28.Size = new System.Drawing.Size(370, 38);
             this.textBox28.TabIndex = 28;
+            this.textBox28.Visible = false;
             // 
             // textBox29
             // 
+            this.textBox29.Enabled = false;
             this.textBox29.Location = new System.Drawing.Point(811, 519);
             this.textBox29.Name = "textBox29";
             this.textBox29.Size = new System.Drawing.Size(370, 38);
             this.textBox29.TabIndex = 29;
+            this.textBox29.Visible = false;
             // 
             // textBox30
             // 
+            this.textBox30.Enabled = false;
             this.textBox30.Location = new System.Drawing.Point(811, 573);
             this.textBox30.Name = "textBox30";
             this.textBox30.Size = new System.Drawing.Size(370, 38);
             this.textBox30.TabIndex = 30;
+            this.textBox30.Visible = false;
             // 
             // backB
             // 

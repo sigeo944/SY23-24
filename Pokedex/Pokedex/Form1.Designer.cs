@@ -48,6 +48,11 @@
             this.atDD = new System.Windows.Forms.DomainUpDown();
             this.saveB = new System.Windows.Forms.Button();
             this.debugTB = new System.Windows.Forms.TextBox();
+            this.FirstB = new System.Windows.Forms.Button();
+            this.PrevB = new System.Windows.Forms.Button();
+            this.NextB = new System.Windows.Forms.Button();
+            this.LastB = new System.Windows.Forms.Button();
+            this.newB = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.lvlUD)).BeginInit();
             this.SuspendLayout();
             // 
@@ -194,8 +199,13 @@
             // 
             // atDD
             // 
+            this.atDD.Items.Add("Attack");
+            this.atDD.Items.Add("SP_Attack");
+            this.atDD.Items.Add("Defense");
+            this.atDD.Items.Add("SP_Defense");
             this.atDD.Location = new System.Drawing.Point(314, 174);
             this.atDD.Name = "atDD";
+            this.atDD.ReadOnly = true;
             this.atDD.Size = new System.Drawing.Size(311, 49);
             this.atDD.TabIndex = 17;
             // 
@@ -217,12 +227,68 @@
             this.debugTB.Name = "debugTB";
             this.debugTB.Size = new System.Drawing.Size(477, 146);
             this.debugTB.TabIndex = 19;
+            this.debugTB.Visible = false;
+            // 
+            // FirstB
+            // 
+            this.FirstB.Location = new System.Drawing.Point(838, 12);
+            this.FirstB.Name = "FirstB";
+            this.FirstB.Size = new System.Drawing.Size(177, 72);
+            this.FirstB.TabIndex = 20;
+            this.FirstB.Text = "First";
+            this.FirstB.UseVisualStyleBackColor = true;
+            this.FirstB.Click += new System.EventHandler(this.FirstB_Click);
+            // 
+            // PrevB
+            // 
+            this.PrevB.Location = new System.Drawing.Point(838, 167);
+            this.PrevB.Name = "PrevB";
+            this.PrevB.Size = new System.Drawing.Size(177, 72);
+            this.PrevB.TabIndex = 21;
+            this.PrevB.Text = "Previous";
+            this.PrevB.UseVisualStyleBackColor = true;
+            this.PrevB.Click += new System.EventHandler(this.PrevB_Click);
+            // 
+            // NextB
+            // 
+            this.NextB.Location = new System.Drawing.Point(838, 89);
+            this.NextB.Name = "NextB";
+            this.NextB.Size = new System.Drawing.Size(177, 72);
+            this.NextB.TabIndex = 22;
+            this.NextB.Text = "Next";
+            this.NextB.UseVisualStyleBackColor = true;
+            this.NextB.Click += new System.EventHandler(this.NextB_Click);
+            // 
+            // LastB
+            // 
+            this.LastB.Location = new System.Drawing.Point(838, 245);
+            this.LastB.Name = "LastB";
+            this.LastB.Size = new System.Drawing.Size(177, 72);
+            this.LastB.TabIndex = 23;
+            this.LastB.Text = "Last";
+            this.LastB.UseVisualStyleBackColor = true;
+            this.LastB.Click += new System.EventHandler(this.LastB_Click);
+            // 
+            // newB
+            // 
+            this.newB.Location = new System.Drawing.Point(425, 297);
+            this.newB.Name = "newB";
+            this.newB.Size = new System.Drawing.Size(117, 64);
+            this.newB.TabIndex = 24;
+            this.newB.Text = "New";
+            this.newB.UseVisualStyleBackColor = true;
+            this.newB.Click += new System.EventHandler(this.newB_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(22F, 42F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1037, 525);
+            this.Controls.Add(this.newB);
+            this.Controls.Add(this.LastB);
+            this.Controls.Add(this.NextB);
+            this.Controls.Add(this.PrevB);
+            this.Controls.Add(this.FirstB);
             this.Controls.Add(this.debugTB);
             this.Controls.Add(this.saveB);
             this.Controls.Add(this.atDD);
@@ -247,6 +313,7 @@
             this.Margin = new System.Windows.Forms.Padding(8);
             this.Name = "Form1";
             this.Text = "Pokedex";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.lvlUD)).EndInit();
             this.ResumeLayout(false);
@@ -276,6 +343,11 @@
         private System.Windows.Forms.DomainUpDown atDD;
         private System.Windows.Forms.Button saveB;
         private System.Windows.Forms.TextBox debugTB;
+        private System.Windows.Forms.Button FirstB;
+        private System.Windows.Forms.Button PrevB;
+        private System.Windows.Forms.Button NextB;
+        private System.Windows.Forms.Button LastB;
+        private System.Windows.Forms.Button newB;
     }
 }
 

@@ -12,15 +12,16 @@ namespace Campaign_Sorting
 {
     public partial class Form2 : Form
     {
-        Form1 form1;
         public Form2()
         {
             InitializeComponent();
+            int cam = 3;
+            TextBox tb = Controls.TextBox.Find("textBox", true);
         }
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            int cam = form1.campaigns;
+           
         }
     }
 }
