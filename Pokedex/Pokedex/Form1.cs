@@ -9,14 +9,16 @@ using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.Json;
 
 namespace Pokedex
 {
-    enum Attacks
+    public enum Attacks
     {
         Attack, SP_Attack, Defense, SP_Defense
     }
-    struct Pokemon
+
+    /*struct Pokemon
     {
         public string Name;
         public string Type;
@@ -27,7 +29,8 @@ namespace Pokedex
         public bool Legendary;
         public bool Shiny;
         public int Gen;
-    }
+    }*/
+
     public partial class Form1 : Form
     {
         private int current;
@@ -49,19 +52,34 @@ namespace Pokedex
                 StreamReader inFile = new StreamReader("Pokemon.txt");
                 while (!inFile.EndOfStream)
                 {
-                    string S = inFile.ReadLine();
-                    Pokemon p = ReadPokemon(S);
+                    string s = inFile.ReadLine();
+                    Pokemon p = JsonSerializer.Deserialize<Pokemon>(s); //ReadPokemon(s); Project, Manage NuGet Packages, Browse, Search for System.Text.Json, Instal, OK, Code (using System.Text.Json:)
                     pokemons[count] = p;
                     count++;
                 }
                 inFile.Close();
                 ShowPokemon(pokemons[0]);
             }
+            else
+            {
+                Pokemon p = new Pokemon();
+                p.Name = "Pikachu";
+                p.Type = "Electric";
+                p.Level = 5;
+                p.attackType = Attacks.Attack;
+                p.HP = 15;
+                p.Exp = 0;
+                p.Legendary = false;
+                p.Shiny = false;
+                p.Gen = 1;
+                count = 1;
+                pokemons[0] = p;
+            }
         }
 
         private Pokemon ReadPokemon(string s)
         {
-            Pokemon p = new Pokemon();
+            /*Pokemon p = new Pokemon();
             string[] fields = s.Split('|');
             p.Name = fields[0];
             p.Type = fields[1];
@@ -77,14 +95,15 @@ namespace Pokedex
                 p.Shiny = true;
             else
                 p.Shiny = false;
-            p.Gen = int.Parse(fields[8]);
+            p.Gen = int.Parse(fields[8]);*/
 
+            Pokemon p = JsonSerializer.Deserialize<Pokemon>(s);
             return p;
         }
 
         private void save()
         {
-            string temp = "";
+            /*string temp = "";
             temp += nameTB.Text;
             temp += "|";
             temp += typeTB.Text;
@@ -103,16 +122,36 @@ namespace Pokedex
             temp += "|";
             temp += genTB.Text;
 
-            pokemons[current] = ReadPokemon(temp);
+            pokemons[current] = ReadPokemon(temp);*/
+            UpdatePokemon();
             StreamWriter outFile = new StreamWriter("Pokemon.txt");
             for (int i = 0; i < count; i++)
             {
-                outFile.WriteLine(PokemonToString(pokemons[i]));
+                string jsonString = JsonSerializer.Serialize(pokemons[i]);
+                outFile.WriteLine(jsonString); //(PokemonToString(pokemons[i]));
             }
             outFile.Close();
         }
 
-        private string PokemonToString(Pokemon p)
+        private void UpdatePokemon()
+        {
+            Pokemon p = pokemons[current];
+            if (p != null)
+            {
+                p.Name = nameTB.Text;
+                p.Type = typeTB.Text;
+                p.Level = int.Parse(lvlUD.Text);
+                p.attackType = (Attacks)Enum.Parse(typeof(Attacks), atDD.Text);
+                p.HP = int.Parse(hpTB.Text);
+                p.Exp = int.Parse(expTB.Text);
+                p.Legendary = legCB.Checked;
+                p.Shiny = shinCB.Checked;
+                p.Gen = int.Parse(genTB.Text);
+            }
+
+        }
+
+        /*private string PokemonToString(Pokemon p)
         {
             string retVal = "";
             retVal += p.Name;
@@ -134,7 +173,7 @@ namespace Pokedex
             retVal += p.Gen.ToString();
 
             return retVal;
-        }
+        }*/
 
         private void clear()
         {
@@ -156,15 +195,18 @@ namespace Pokedex
 
         private void ShowPokemon(Pokemon p)
         {
-            nameTB.Text = p.Name;
-            typeTB.Text = p.Type;
-            lvlUD.Value = p.Level;
-            atDD.Text = p.attackType.ToString();
-            hpTB.Text = p.HP.ToString();
-            expTB.Text = p.Exp.ToString();
-            legCB.Checked = p.Legendary;
-            shinCB.Checked = p.Shiny;
-            genTB.Text = p.Gen.ToString();
+            if (p != null)
+            {
+                nameTB.Text = p.Name;
+                typeTB.Text = p.Type;
+                lvlUD.Value = p.Level;
+                atDD.Text = p.attackType.ToString();
+                hpTB.Text = p.HP.ToString();
+                expTB.Text = p.Exp.ToString();
+                legCB.Checked = p.Legendary;
+                shinCB.Checked = p.Shiny;
+                genTB.Text = p.Gen.ToString();
+            }
         }
 
         private void FirstB_Click(object sender, EventArgs e)
@@ -207,6 +249,7 @@ namespace Pokedex
 
         private void newB_Click(object sender, EventArgs e)
         {
+            pokemons[current] = new Pokemon();
             count++;
             current = count - 1;
             clear();
@@ -214,7 +257,20 @@ namespace Pokedex
 
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
         {
+            UpdatePokemon();
             save();
         }
+    }
+    public class Pokemon
+    {
+        public string Name { get; set; }
+        public string Type { get; set; }
+        public int Level { get; set; }
+        public Attacks attackType { get; set; }
+        public int HP { get; set; }
+        public int Exp { get; set; }
+        public bool Legendary { get; set; }
+        public bool Shiny { get; set; }
+        public int Gen { get; set; }
     }
 }
